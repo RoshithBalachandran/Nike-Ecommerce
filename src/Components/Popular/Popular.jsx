@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ProductCard from '../Pages/ProductCard';
-import './Popular.css';
+import "./Popular.css";
 const Popular = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
