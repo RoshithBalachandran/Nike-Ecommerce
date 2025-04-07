@@ -1,8 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { v4 as uuidv4 } from 'uuid';
-
-
 import "./CSS/Signup.css";
 
 const API_URL = "http://localhost:3001/users";
@@ -29,7 +26,6 @@ const Signup = () => {
 
     const { firstName, lastName, phone, email, password, confirmPassword } = formData;
 
-    // Validation
     if (Object.values(formData).some((val) => val === "")) {
       return setError("All fields are required!");
     }
@@ -38,27 +34,23 @@ const Signup = () => {
     }
 
     try {
-      console.log("Checking existing users...");
       const response = await fetch(API_URL);
       if (!response.ok) throw new Error("Failed to fetch users");
 
       const users = await response.json();
-      
+
       if (users.find((user) => user.email.toLowerCase() === email.toLowerCase())) {
         return setError("User already exists! Please log in.");
       }
 
-      // Create new user
-      const newUser = { 
-        id:  crypto.randomUUID(),
-        firstName, 
-        lastName, 
-        phone, 
-        email, 
-        password 
+      const newUser = {
+        id: crypto.randomUUID(), // Use browser-native UUID
+        firstName,
+        lastName,
+        phone,
+        email,
+        password,
       };
-
-      console.log("Creating new user:", newUser);
 
       const postResponse = await fetch(API_URL, {
         method: "POST",
@@ -66,7 +58,6 @@ const Signup = () => {
         body: JSON.stringify(newUser),
       });
 
-      console.log("Response Status:", postResponse.status);
       if (!postResponse.ok) throw new Error("Failed to create user");
 
       alert("Signup Successful! Please log in.");
@@ -82,7 +73,7 @@ const Signup = () => {
       <div className="signup-container">
         <h1>Sign Up</h1>
         <form onSubmit={handleSignup}>
-          {Object.keys(formData).map((key) => (
+          {Object.keys(formData).map((key) =>
             key !== "confirmPassword" ? (
               <input
                 key={key}
@@ -93,7 +84,7 @@ const Signup = () => {
                 onChange={handleChange}
               />
             ) : null
-          ))}
+          )}
           <input
             type="password"
             name="confirmPassword"
