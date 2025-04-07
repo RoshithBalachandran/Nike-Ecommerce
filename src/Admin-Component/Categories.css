@@ -1,0 +1,136 @@
+.categories-container {
+  margin-left: 180px; /* For sidebar space */
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.categories-container h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Category Navigation */
+.category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.category-nav button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.category-nav button:hover {
+  background-color: #f1f1f1;
+}
+
+.category-nav button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* Sort section */
+.sort-section {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-section label {
+  font-weight: 600;
+  color: #444;
+}
+
+.sort-section select {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Table Container */
+.table-container {
+  overflow-x: auto;
+  background-color: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.products-table th,
+.products-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e1e1e1;
+  text-align: left;
+}
+
+.products-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+  color: #555;
+}
+
+.products-table td {
+  color: #333;
+}
+
+.product-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.product-img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .categories-container {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .category-nav {
+    flex-direction: column;
+  }
+
+  .sort-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .products-table th,
+  .products-table td {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}

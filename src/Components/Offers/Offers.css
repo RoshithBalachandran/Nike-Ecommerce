@@ -1,0 +1,59 @@
+/* Offers Section Styling */
+.offers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f8f8f8;
+  padding: 80px 10%;
+}
+
+.offers-left {
+  max-width: 600px;
+}
+
+.offers-left h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.offers-left p {
+  font-size: 1.4rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.offerimage {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.offerimage:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .offers {
+    padding: 50px 5%;
+  }
+
+  .offers-left h1 {
+    font-size: 2.5rem;
+  }
+
+  .offers-left p {
+    font-size: 1.2rem;
+  }
+
+  .offerimage {
+    max-width: 100%;
+  }
+}
+

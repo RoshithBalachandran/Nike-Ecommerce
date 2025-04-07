@@ -1,0 +1,136 @@
+/* Products.css */
+
+.products-container {
+  margin-left: 180px; /* Space for sidebar */
+  padding: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  margin-top: -100px;
+}
+
+.products-container h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.add-product-btn {
+  background-color: #4b9cdb;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.add-product-btn:hover {
+  background-color: #3a82c3;
+}
+
+.products-table-wrapper {
+  overflow-x: auto;
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.products-table th,
+.products-table td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.products-table th {
+  background-color: #e3f0fc;
+  color: #333;
+  font-weight: 600;
+}
+
+.products-table td {
+  color: #555;
+}
+
+.product-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.update-btn,
+.delete-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.update-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.update-btn:hover {
+  background-color: #3e8e41;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .products-container {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .products-table th,
+  .products-table td {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .add-product-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .product-img {
+    width: 50px;
+    height: 50px;
+  }
+}

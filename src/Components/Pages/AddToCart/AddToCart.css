@@ -1,0 +1,130 @@
+.addtocart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.checkout-box {
+  background-color: #fff;
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.user-details input,
+.user-details textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.user-details input:focus,
+.user-details textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.user-details textarea {
+  resize: none;
+}
+
+.payment-method {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.payment-method h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.payment-method label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.payment-method input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.summary {
+  text-align: center;
+}
+
+.summary h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.place-order-btn {
+  background-color: #28a745;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.place-order-btn:hover {
+  background-color: #218838;
+}
+
+.place-order-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.order-success {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.order-success h2 {
+  color: #28a745;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.order-success p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+  .checkout-box {
+    padding: 1.5rem;
+  }
+
+  .summary h3 {
+    font-size: 1rem;
+  }
+
+  .place-order-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,69 @@
+/* Search Results Container */
+div {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Search Results Title */
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 120px;
+}
+
+/* Product List Grid */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Individual Product Card */
+.product {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+/* Product Image */
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Product Name */
+.product h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Product Price */
+.product p {
+  font-size: 16px;
+  color: #000000;
+  margin: 5px 0;
+}
+
+/* Old Price with Strikethrough */
+.product p:first-of-type {
+  text-decoration: line-through;
+  color: rgb(55, 55, 55);
+}
+
+/* New Price */
+.product p:last-of-type {
+  font-weight: bold;
+  color: #446e52;
+}

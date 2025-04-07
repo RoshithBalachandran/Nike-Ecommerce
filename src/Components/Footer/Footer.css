@@ -1,0 +1,96 @@
+.footer {
+    width: 100%;
+    background-color: #111;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+    
+}
+
+.footer-log {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.Nike-img {
+    width: 50px; /* Adjust size for responsiveness */
+    height: auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+    flex-wrap: wrap; /* Makes it responsive */
+    justify-content: center;
+}
+
+.footer-links li {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.footer-links li:hover {
+    color: #6b6b6b;
+}
+
+.footer-social-icon {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.footer-icons-container img {
+    width: 30px; /* Adjust size for responsiveness */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.footer-icons-container img:hover {
+    transform: scale(1.1);
+}
+
+.footer-copyright {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    margin-top: -50px;
+}
+
+.footer-copyright hr {
+    width: 90%;
+    border: 0.5px solid #444;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-links {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .footer-social-icon {
+        gap: 10px;
+    }
+
+    .footer-icons-container img {
+        width: 25px;
+    }
+
+    .Nike-img {
+        width: 40px;
+    }
+
+    .footer-copyright {
+        font-size: 12px;
+    }
+}
