@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { v4 as uuidv4 } from "uuid"; // Import UUID for unique IDs
+import { v4 as uuidv4 } from 'uuid';
+
+
 import "./CSS/Signup.css";
 
 const API_URL = "http://localhost:3001/users";
@@ -48,7 +50,7 @@ const Signup = () => {
 
       // Create new user
       const newUser = { 
-        id: uuidv4(), // Unique ID
+        id:  crypto.randomUUID(),
         firstName, 
         lastName, 
         phone, 
